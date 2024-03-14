@@ -1,0 +1,44 @@
+/**************/
+/*GENERAL*/
+.header-wrapper {
+    background-color: transparent !important;
+}
+.header-wrapper.sticky {
+    background-color: #ffffff !important;
+}
+
+
+/*******************/
+/*******************/
+/*MEDIA QUERIES*/
+/*******************/
+/*******************/
+
+/********/
+/*MOBILE*/
+@media (max-width: 768px) {
+
+}
+
+
+
+
+/********/
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 989px)  {
+
+}
+
+
+/********/
+/*LAPTOP*/
+@media (min-width: 990px) and (max-width: 1400px)  {
+
+}
+
+
+/********/
+/*DESKTOP*/
+@media (min-width: 1401px)  {
+
+}

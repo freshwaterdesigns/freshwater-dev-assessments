@@ -1,0 +1,207 @@
+<style>
+    .section__header {
+        padding: 15px;
+    }
+    .banner-elevate-hoox.hero .hero__figure {
+        margin: 0;
+        max-height: 400px;
+        overflow: hidden;
+    }
+    section.banner-elevate-hoox.hero .section__header {
+        position: absolute;
+        bottom: 0;
+    }
+    .section_header_wrapper {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 5px;
+        display: flex;
+        flex-flow: column;
+        max-width: 530px;
+        padding: 10px 16px;
+        }
+    .section__header .section__ul {
+        margin-bottom: 0;
+    }
+    .section__header .section__rating {
+        align-items: center;
+        display: flex;
+        font-size: 1.2rem;
+        justify-content: center;
+        letter-spacing: 1px;
+        line-height: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .section__header .section__rating svg {
+        fill: #febc62;
+        margin-right: 10px;
+        width: 96px;
+    }
+    
+    .section__header .section__rating span {
+        align-items: center;
+        color: #3C3B40;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        line-height: 14px;
+        position: relative;
+        text-transform: capitalize;
+        top: -3px;
+    }
+    
+    .section__header .section__h1 {
+        color: #223457;
+        font-size: 32px;
+        letter-spacing: 0.05em;
+        line-height: 2.5rem;
+        margin: 7px auto;
+        width: auto !important;
+    }
+    
+    .section__subheader {
+        color: #000;
+        font-size: 1.5rem !important;
+        font-weight: 500;
+        line-height: 2.4rem;
+        margin: 5px auto 15px;
+    }
+    
+    .section__cta a.button {
+        background-color: #E26E3B;
+        background-image: none !important;
+        border-radius: 4px;
+        height: 50px;
+        max-width: 420px;
+        width: 100%;
+    }
+    .section__guarantee {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        max-width: none;
+        text-align: center;
+        width: 100%;
+    }
+    
+    @media all and (min-width: 768px) {
+        .banner-elevate-hoox.hero .hero__figure img {
+            object-fit: contain;
+            object-position: 0 -40px;
+        }
+        .banner-elevate-hoox.hero .section__header {
+        text-align: left;
+        }
+    
+        section.banner-elevate-hoox.hero .section__header {
+        left: 2%;
+        top: 1%;
+        }
+
+    
+        .section__header .section__rating {
+        display: block;
+        order: 3;
+        }
+    
+        .section__header .section__rating svg {
+        max-width: 96px;
+        width: 100%;
+        }
+    
+        .section__header .section__rating span {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        }
+    
+        .section__header .section__h1 {
+        font-size: 32px;
+        line-height: 115%;
+        order: 1;
+        width: 530px !important;
+        }
+    
+        .section__subheader {
+        margin: 5px 0 15px;
+        max-width: 100%;
+        order: 2;
+        }
+    
+        .section__cta {
+        margin: 10px 0;
+        order: 4;
+        }
+        .section__guarantee {
+            order: 5;
+            max-width: 250px;
+            width: 90%;
+        }
+    
+        .section__cta a.button {
+        background-color: #E26E3B;
+        border-radius: 4px;
+        height: 48px;
+        max-width: 320px;
+        width: 90%;
+        }
+    }
+    
+    @media all and (min-width: 1024px) {
+        section.banner-elevate-hoox.hero .section__header {
+        top: 18%;
+        }
+    }
+    
+    
+    /*****************/
+    /*ab test winner*/
+    
+    .section__subheader--narrow {
+        margin : 5px 0px 15px 0px;
+    }
+    @media (max-width: 767px) {
+        .section__header .section__h1 {
+            color: #1E345A;
+            font-size : 28px !important;
+            line-height: 125%;
+            max-width : 330px !important;
+            margin: 0 auto 10px;
+        }
+    
+        .section__subheader--narrow {
+            font-size : 1.6rem !important;
+            line-height: 2.1rem;
+            margin: 0 auto 15px;
+        }
+    }
+    </style>
+    
+    <section class="banner-elevate-hoox hero">
+        <figure class="hero__figure">
+            {% include '0-fresh-picture',
+                alt: 'avantera premium supplements nootropics elevate',
+                class: 'hero__picture',
+                path: '//cdn.shopify.com/s/files/1/0405/9870/0189/files/',
+                src: 'avantera-supplements-banner-eleavte',
+                srcMobile: 'avantera-supplements-banner-elevate-mobile',
+                jpg: true,
+                png: false,
+                webp: false
+            %}
+        </figure>
+        <header class="section__header">
+            <div class="section_header_wrapper">
+                <h1 class="section__h1">
+                    Discover A Whole New World<br class="hide-mobile">
+                    Of Productivity
+                </h1>
+                <div class="section__subheader--narrow section__subheader">
+                    Show your brain what it's been missing.
+                </div>
+                <div class="section__cta">
+                    <a href="/products/elevate" class="gallery__button button">
+                        Get Elevated
+                    </a>
+                </div>
+            </div>
+        </header>
+    </section>

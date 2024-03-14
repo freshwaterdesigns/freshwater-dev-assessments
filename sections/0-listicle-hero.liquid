@@ -1,0 +1,137 @@
+<div id="listicle-hero">
+  <img
+    class="main-img"
+    src="https://cdn.shopify.com/s/files/1/0405/9870/0189/files/avantera-try-elevate.jpg?v=1661962618"
+    loading="lazy"
+    alt="avantera try elevate"
+  >
+  <div class="text-wrapper">
+    <img
+      class="hero-logo hide-mobile"
+      src="https://cdn.shopify.com/s/files/1/0405/9870/0189/files/avantera-logo-white.png?v=1662068944"
+      loading="lazy"
+      alt="avantera logo"
+    >
+    <img
+      class="hero-logo hide-desktop"
+      src="https://cdn.shopify.com/s/files/1/0405/9870/0189/files/FINAL-AVANTERA-LOGO-Color_410x.png?v=1595626896"
+      loading="lazy"
+      alt="avantera logo"
+    >
+    <h2>
+      3 reasons why thousands are<br>
+      ditching their stimulants for Elevate
+    </h2>
+    <div class="divider"></div>
+    <p class="testimonial">
+      “Love it!" Have tons of energy with no brain fog” <br>
+      <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>- Karrie W.
+    </p>
+
+    <p><a class="fresh-button button-orange" href="/products/elevate">Learn More</a></p>
+  </div>
+</div>
+
+<style>
+    #listicle-hero {
+        position: relative;
+        margin-top: 60px;
+    }
+    #listicle-hero img.main-img {
+        filter: brightness(.7);
+    }
+    #listicle-hero .text-wrapper {
+        position: absolute;
+        width: 90%;
+        max-width: 800px;
+        top: 50%;
+        left:  50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    #listicle-hero .text-wrapper h2 {
+        font-size: 38px;
+        line-height: 125%;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 20px 0;
+    }
+    #listicle-hero .divider {
+        display: block !important;
+        width: 100px;
+        border-bottom: 2px solid var(--color-orange);
+        margin: 10px auto 20px;
+    }
+    #listicle-hero p.testimonial {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        background: transparent !important;
+    }
+    #listicle-hero .review-stars {
+        color: #FBBE24;
+        margin-bottom: 0px;
+        padding-right: 5px;
+    }
+    #listicle-hero a.fresh-button {
+        display: inline-block;
+        font-size: 16px;
+        padding: 15px 50px;
+        background: var(--color-orange);
+        color: #ffffff;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    #listicle-hero a.fresh-button:hover {
+        background: #ffffff;
+        color: var(--color-orange);
+    }
+    /********/
+    /*MOBILE*/
+    @media (max-width: 768px) {
+        #listicle-hero {
+            margin-top: 50px;
+            background: #FBFBFB;
+        }
+        #listicle-hero img.hero-logo {
+            max-width: 200px;
+        }
+  #listicle-hero .text-wrapper {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0%,0%);
+            text-align: center;
+            width: 100%;
+            background: none;
+            padding: 10px 10px;
+  }
+  #listicle-hero .text-wrapper h2 {
+  	font-size: 22px;
+            color: var(--color-blue);
+            text-shadow: none;
+            margin-bottom: 10px;
+  }
+        #listicle-hero p.testimonial {
+            font-size: 16px;
+            color: var(--color-blue);
+            font-weight: 600;
+        }
+  #listicle-hero a.fresh-button {
+  	padding: 13px 40px;
+  	font-size: 14px;
+  }
+    }
+</style>
+
+{% schema %}
+{
+"name": "New Home - Hero",
+"presets": [
+    {
+    "name": "New Home - Hero"
+    }
+]
+}
+{% endschema %}

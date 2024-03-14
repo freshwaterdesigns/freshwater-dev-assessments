@@ -1,0 +1,113 @@
+{% assign bgColor = section.settings.bg_color %}
+{% assign headingColor = section.settings.heading_color %}
+{% assign textColor = section.settings.text_color %}
+{% assign linkColor = section.settings.link_color %}
+{% assign linkBgColor = section.settings.link_bg_color %}
+<style>
+.custom-cta-info--{{ section.id }} {
+    background-color: {{ bgColor }};
+}
+
+.custom-cta-info__text--{{ section.id }} {
+    color: {{ textColor }};
+}
+  
+.custom-cta-info__heading--{{ section.id }} h2 {
+    color: {{ headingColor }};
+}
+
+.custom-cta-info__link--{{ section.id }} {
+    background-color: {{ linkBgColor }} !important;
+    border-color: {{ linkBgColor }} !important;
+    color: {{ linkColor }} !important;
+}
+</style>
+
+<section class="custom-cta-info custom-cta-info--{{ section.id }} page-width">
+  {% if section.settings.heading != blank %} 
+  <div class="custom-cta-info__heading custom-cta-info__heading--{{ section.id }}">
+      <h1>{{ section.settings.heading }}</h1>
+    </div>
+  {% endif %}
+  {% if section.settings.code != blank %}
+      <div class="custom-cta-info__text custom-cta-info__text--{{ section.id }}" style="width: 92%; max-width: 800px !important;">
+      {{ section.settings.code }}
+    </div>
+  {% endif %}
+  {% if section.settings.link_label != blank %}  
+    <a class="custom-cta-info__link custom-cta-info__link--{{ section.id }} button" href="{{ section.settings.link }}">
+        {{ section.settings.link_label }}
+    </a>
+  {% endif %}  
+</section> 
+
+{% schema %}
+{
+  "name": "Custom Homepage Title",
+  "class": "custom-homepage-title-section",
+  "settings": [
+        {   
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#fff"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+        },
+        {
+          "type": "html",
+          "label": "Custom HTML",
+          "id": "code",
+          "label": "HTML"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#000"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000"
+        },
+        {
+            "type": "text",
+            "id": "link_label",
+            "label": "Link label",
+            "default": "Buy Now"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+        }, 
+        {
+            "type": "color",
+            "id": "link_color",
+            "label": "Link Color",
+            "default": "#fff"
+        }, 
+        {
+            "type": "color",
+            "id": "link_bg_color",
+            "label": "Link Background Color",
+            "default": "#e36e3b"
+        }
+  ],
+  "presets": [
+    {
+      "name": "Custom homepage title",
+      "category": "Miscellaneous",
+      "settings": {
+
+      }
+    }
+  ]
+}
+{% endschema %}

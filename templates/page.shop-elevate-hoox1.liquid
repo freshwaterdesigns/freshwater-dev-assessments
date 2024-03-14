@@ -1,0 +1,142 @@
+<style>
+    /* hide the default page header and footer */
+    sticky-header.header {
+        display: none;
+    }
+
+/* custom Hoox stylize some sections being pulled in from elsewhere on the site */
+
+    /* header styles to accommodate the add to cart button */
+    .header-lp .header-lp__logo {
+        width: 155px;
+    }
+    .header-lp .header-lp__subscribe {
+        display: inline-grid !important;
+        margin-right: 15px;
+        min-width: auto;
+        padding: 10px;
+    }
+    @media (min-width: 450px) {
+        .header-lp .header-lp__logo {
+            width: 188px;
+        }
+        .header-lp .header-lp__subscribe {
+            margin-right: 30px;
+            min-width: 150px;
+            padding: 15px 10px;
+        }
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+    .section--hoox {
+        padding: 48px 20px;
+    }
+    .section--hoox-shop {
+        padding: 48px 20px 0;
+    }
+    .page__shop-elevate-hoox1 h2.faqs-header,
+    .page__shop-elevate-hoox1 #faqs h3 {
+        color: #1E345A;
+    }
+    .page__shop-elevate-hoox1 h2.faqs-header {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+    }
+    .page__shop-elevate-hoox1 .testimonials__wrapper .text-c {
+        padding: 0;
+    }
+    .page__shop-elevate-hoox1 .testimonials__wrapper h2, .custom-testimonial .testimonials__wrapper h2 {
+        font-size: 2.6rem;
+        line-height: 130%;
+    }
+
+    @media (min-width: 768px) {
+        .hide-mobile {
+            display: block !important;
+        }
+        .hide-desktop {
+            display: none !important;
+        }
+        .section--hoox {
+            padding: 80px 20px;
+        }
+        .section--hoox-shop {
+            padding: 80px 20px 0;
+        }
+        .page__shop-elevate-hoox1 h2.faqs-header {
+            font-size: 3.6rem;
+            line-height: 4.6rem;
+        }
+        .page__shop-elevate-hoox1 .testimonials__wrapper h2, .custom-testimonial .testimonials__wrapper h2 {
+            font-size: 3.6rem;
+            line-height: 4.6rem;
+        }
+    }
+</style>
+
+<div class="page page__shop-elevate-hoox1">
+    {% section '0-header-lp' %}
+    {% section '0-hero-elevate' %}
+    {% section '0-logos' %}
+    {% section '0-press' %}
+    {% section '0-testimonials-elevate-tiktok' %}
+    {% section '0-benefits-elevate2' %}
+    {% section '0-banner-elevate-ingredients' %}
+    {% section '0-icons-scroll' %}
+    <section id="shopElevateHoox" class="section--hoox-shop">
+        {% section '0-product-top-elevate' %}
+    </section>
+    {% section '0-better-together-elevate-unwind' %}
+    {% section '0-compare-elevate' %}
+    {% section '0-testimonials-text-elevate-hoox' %}
+    {% section '0-cta-elevate' %}
+    {% section '0-faqs-elevate-hoox' %}
+    {% section '0-banner-elevate-hoox' %}
+    <section id="reviews" class="section--hoox">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                <div id="looxReviews" data-product-id="{{5805123043485}}" class="loox-reviews-default">
+                    {{ product.metafields.loox.reviews }}
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  {% comment %}
+    {% section '0-footer-lp' %}
+  {% endcomment %}
+</div>
+
+<script>
+    $0(document).ready(function(){
+
+        //cart drawer slider listener
+        $0('#headerLp').find('.header__cart a').on( "click", function(event) {
+            $0('.drawer').addClass('active');
+            event.preventDefault();
+            event.stopPropagation();
+        });
+
+        //smooth scroll to shop
+        $0( '.scroll-to-shop' ).on( 'click', function(event) {
+            $0('html,body').animate({
+                scrollTop: $0('#shopElevateHoox').offset().top - $0('#headerLp').outerHeight()
+            },'slow');
+            event.preventDefault();
+            event.stopPropagation();
+        });
+
+        //smooth scroll to reviews
+        $0( '.scroll-to-reviews' ).on( 'click', function(event) {
+            $0('html,body').animate({
+                scrollTop: $0('#reviews').offset().top
+            },'slow');
+            event.preventDefault();
+            event.stopPropagation();
+        });
+
+    });
+</script>

@@ -1,0 +1,47 @@
+<div class="fresh-mobile-menu">
+	<div class="fresh-mobile-menu-inner">
+		<ul class="menu-links">
+			{% for link in linklists[section.settings.main_linklist].links %}
+				{% if link.links == blank %}
+					<li {% if link.active %}class="Selected"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% else %}
+					<li {% if link.active %}class="Selected"{% endif %}>
+						{% if link.url == 'http://' or link.url == '' or link.url == '/' or link.url == 'https://' or link.url == '#' %}
+							<span>{{ link.title }}</span>
+						{% else %}
+							<a href="{{ link.url }}">{{ link.title }}</a>
+						{% endif %}
+						<ul>
+							{% for sub_link in link.links %}
+								{% if sub_link.links == blank %}
+									<li {% if sub_link.active %}class="Selected"{% endif %}><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+								{% else %}
+								<li {% if sub_link.active %}class="Selected"{% endif %}>
+									{% if sub_link.url == 'http://' or sub_link.url == '' or sub_link.url == '/' or sub_link.url == 'https://' or sub_link.url == '#' %}
+										<span>{{ sub_link.title }}</span>
+									{% else %}
+										<a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+									{% endif %}
+									<ul>
+										{% for sub_sub_link in sub_link.links %}
+											<li {% if sub_sub_link.active %}class="Selected"{% endif %}><a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a></li>
+										{% endfor %}
+									</ul>
+								</li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	      
+	      <div class="mobile-dropdown-bottom">
+	          <ul class="fixed-menu">{% render 'mobile-menu', menu: section.settings.main_linklist2 %}</ul>
+	      </div>		
+
+	</div>
+</div>
+
+<div class="freshwater-mobile-menu-cover">	
+</div>
