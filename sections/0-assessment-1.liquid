@@ -1,0 +1,84 @@
+<style>
+    .fresh-assessment-1 {
+        margin: 40px 10px;
+    }
+    .fresh-assessment-1 figure {
+        font-size: 0;
+        line-height: 0;
+        margin: 0 0 20px;
+        position: relative;
+    }
+    .fresh-assessment-1 .label {
+        background: yellow;
+        bottom: 0;
+        right: 0;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 15px;
+        padding: 1px 3px;
+        position: absolute;
+    }
+    .fresh-assessment-1 img {
+        height: auto;
+        max-width: 100%;
+    }
+    .fresh-assessment-1 h1 {
+        margin: 0 0 20px;
+    }
+    .fresh-assessment-1 .button {
+        background: #333;
+        color: #fff;
+        padding: 3px 10px;
+        text-decoration: none;
+    }
+    @media (min-width: 768px) {
+        .fresh-assessment-1 {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 50% 45%;
+            margin: 40px 0;
+        }
+        .fresh-assessment-1 figure {
+            margin: 0;
+        }
+    }
+</style>
+
+<div>
+    <figure>
+        <img src="https://placehold.co/2800x2100?text=placeholder" width="2800" height="2100" alt="A placeholder image">
+        <span class="label">New!</span>
+    </figure>
+</div>
+<div>
+    <h1>
+        Hello World!
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet nulla finibus, ornare orci sed, vestibulum eros. Etiam id nibh in nunc vehicula ultricies. Proin semper venenatis lectus, non congue arcu sagittis nec. Aliquam ornare semper suscipit. Vestibulum in malesuada eros. Duis mattis accumsan erat, et tincidunt nulla ultricies et. Nullam magna urna, volutpat sed sollicitudin eu, rutrum vel turpis. Maecenas mattis leo quis consequat lobortis. Vestibulum lorem lectus, accumsan quis ipsum in, auctor aliquet orci. Aenean ut malesuada urna. Nulla eget magna pretium tortor vulputate pharetra sit amet sit amet velit. Donec vulputate pretium imperdiet.
+    </p>
+    <p>
+        Aliquam condimentum nisi in commodo varius. Curabitur orci augue, lobortis eu nunc id, pulvinar convallis tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse rhoncus justo sed dui posuere elementum. Quisque non imperdiet erat. Nam pharetra facilisis volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed quis enim sed arcu tristique efficitur. Duis non mattis sem.
+    </p>
+    <a href="https://www.shopify.com/" class="button">Add to Cart</a>
+</div>
+
+
+{% schema %}
+    {
+        "name": "0 Assessment 1",
+        "tag": "section",
+        "class": "fresh-assessment-1",
+        "settings": [
+
+        ],
+        "presets": [
+            {
+                "name": "0 Assessment 1",
+                "blocks": [
+                        
+                ]
+            }
+        ]
+    }
+{% endschema %}
